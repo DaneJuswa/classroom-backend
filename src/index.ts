@@ -10,10 +10,7 @@ app.use('/', (req, res) =>{
     res.send("Test server'")
 })
 
-
-
-
+//create connection
 app.listen(PORT, () => {
     console.log('Server Running on port')
-
 })
