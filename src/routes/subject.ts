@@ -34,7 +34,6 @@ router.get('/', async  (req, res) => {
             )
         }
 
-
         //combine all filters
         const whereClause = filterConditions.length > 0 ? and(...filterConditions) : undefined;
 
@@ -71,7 +70,5 @@ router.get('/', async  (req, res) => {
         res.status(400).send({error: e});
     }
 })
-
-
 
 export default router;
