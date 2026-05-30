@@ -36,7 +36,6 @@ export const subjectRelations = relations(subjects, ({one, many}) => ({
 
 }))
 
-
 //automatically infers the type of Department
 export type Department =  typeof departments.$inferSelect;
 export type NewDepartment = typeof departments.$inferInsert;
