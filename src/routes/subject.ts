@@ -26,14 +26,12 @@ router.get('/', async  (req, res) => {
                 ))
         }
 
+        //if dropdown(department) is triggered
         if (department) {
             filterConditions.push(
-                or(
-                    ilike(departments.name, `%${search}%`)
-                )
+                eq(subjects.department, Number(department))
             )
         }
-
 
         //combine all filters
         const whereClause = filterConditions.length > 0 ? and(...filterConditions) : undefined;
